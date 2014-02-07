@@ -1,0 +1,91 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="css/estilos.css" />
+	<script type = "text/javascript" src="js/codigo.js"></script>
+	<script type = "text/javascript" src="js/movimientos.js"></script>
+	<script type = "text/javascript" src="js/policia.js"></script>
+	<script type = "text/javascript" src="js/intervalos.js"></script>
+</head>
+<body onload="inicializarJuego()">
+
+<h1><div id="tiempo"></div></h1>
+	<div style="display: none" id="formulario">
+			
+		<form>
+			Numero de Policias
+			<select id="numeroPolicias">
+  				<option selected="1" value="1">1</option>
+  				<option value="2">2</option>
+  				<option value="3">3</option>
+			</select>
+			<br />
+			Rango de vision de los Policias
+			<select id="rangoVisionPolicias">
+  				<option value="100">100</option>
+  				<option value="250">250</option>
+  				<option selected="450" value="450">450</option>
+  				<option value="700">700</option>
+  				<option value="950">950 (toda la planta)</option>
+			</select>
+			<br />
+			Velocidad de movimiento
+			<select id="velocidadMovimiento">
+  				<option selected="5" value="5">5</option>
+  				<option value="10">10</option>
+			</select>
+			<br />
+			Tiempo restante
+			<select id="tiempoRestante">
+  				<option selected="120" value="120">120</option>
+  				<option value="180">180</option>
+  				<option value="240">240</option>
+  				<option value="300">300</option>
+			</select>
+			<br />
+			Detectar Colisiones
+			<select id="detectarColisiones">
+  				<option selected="Si" value="1">Si</option>
+  				<option value="0">No</option>
+			</select>
+			<br />
+			Detectar Ladron
+			<select id="detectarLadrones">
+  				<option selected="true" value="1">Si</option>
+  				<option value="0">No</option>
+			</select>
+			<br />
+			Tiempo de busqueda tras ser detectado
+			<select id="tiempoBusqueda">
+  				<option selected="5" value="5">5</option>
+  				<option value="10">10</option>
+  				<option value="15">15</option>
+  				<option value="20">20</option>
+  				<option value="25">25</option>
+  				<option value="30">30</option>
+  				<option value="300">infinito</option>
+			</select>
+			<br />
+			
+			<input type="button" onclick="reiniciar()" name="btnReiniciar" value="Guardar y Reiniciar">		
+		</form>
+	</div>
+	
+	
+	
+<div id='edificio'>
+	<img src='imagenes/edificio800.png'/>
+	<div id="ladron"></div>
+	<div id="policia"></div>
+	<div id="dinero"></div>
+	<div id="salida"></div>
+	<div id="escalera0" class="escaleras"></div>
+	<div id="escalera1" class="escaleras"></div>
+	<div id="escalera2" class="escaleras"></div>
+	<div id="escalera3" class="escaleras"></div>
+</div>
+
+<div id="opciones">
+<input type="button" onclick="mostrarOpciones()" name="btnOpciones" value="Ver Opciones">
+</div>
+</body>
+</html>
