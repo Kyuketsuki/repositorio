@@ -1,17 +1,68 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link type="text/css" rel="stylesheet" href="css/estilos.css" />
-	<script type = "text/javascript" src="js/codigo.js"></script>
+	<script type = "text/javascript" src="js/inicializar.js"></script>
 	<script type = "text/javascript" src="js/movimientos.js"></script>
 	<script type = "text/javascript" src="js/policia.js"></script>
-	<script type = "text/javascript" src="js/intervalos.js"></script>
+	<script type = "text/javascript" src="js/eventos.js"></script>
+	<script type = "text/javascript" src="js/usuarios.js"></script>
+	<script type = "text/javascript" src="js/puntuaciones.js"></script>
+	<script type = "text/javascript" src="js/global.js"></script>
 </head>
 <body onload="inicializarJuego()">
+	
+<div id='edificio'>	
+	<img src='imagenes/edificio800.png'/>
+	<div id="ladron"></div>
+	<div id="policia"></div>
+	<div id="dinero"></div>
+	<div id="salida"></div>
+	<div id="escalera0" class="escaleras"></div>
+	<div id="escalera1" class="escaleras"></div>
+	<div id="escalera2" class="escaleras"></div>
+	<div id="escalera3" class="escaleras"></div>
+	<h1><div id="tiempo"></div></h1>
+</div>
 
-<h1><div id="tiempo"></div></h1>
-	<div style="display: none" id="formulario">
-			
+<div id="contenedor">
+	<div id="divUsuarios">
+		<div id="sesionUsuario"></div>
+			<a href="#" onclick="nuevoUsuario()">Nuevo Usuario</a>
+			<a href="#" id='btnLogin' onclick="loginUsuario()">Login</a>
+			<a href="#" style="display: none" id='btnLogout' onclick="logoutUsuario()">Logout</a>	
+		<div style="display: none" id="usuario">
+			Introduzca nombre usuario:<br/><input type="text" id="nombreUsuario"><br/>
+			Introduzca password:<br/><input type="password" id="passwordUsuario"><br/>
+			<input type="button" onclick="guardarNuevoUsuario()" value="Enviar">		
+		</div>
+		<div style="display: none" id="login">
+			Introduzca nombre usuario:<br/><input type="text" id="loginUsuario"><br/>
+			Introduzca password:<br/><input type="password" id="loginPassword"><br/>
+			<input type="button" onclick="iniciarUsuario()" value="Enviar">		
+		</div>
+	</div>
+	<div id="opciones">
+		<input type="button" onclick="mostrarOpciones()" name="btnOpciones" value="Opciones">
+		<input type="button" onclick="reiniciar()" name="btnReiniciar" value="Reiniciar">
+	</div>
+</div>
+
+<div style="display: none" id="formulario">	
 		<form>
+			Musica
+			<select id="musica">
+  				<option selected="true" value="1">Si</option>
+  				<option value="0">No</option>
+			</select>
+			<br />
+			Efectos de sonido
+			<select id="efectos">
+  				<option selected="true" value="1">Si</option>
+  				<option value="0">No</option>
+			</select>
+			<br />
 			Numero de Policias
 			<select id="numeroPolicias">
   				<option selected="1" value="1">1</option>
@@ -64,28 +115,13 @@
   				<option value="30">30</option>
   				<option value="300">infinito</option>
 			</select>
-			<br />
-			
-			<input type="button" onclick="reiniciar()" name="btnReiniciar" value="Guardar y Reiniciar">		
+			<br />		
+			<input type="button" onclick="reiniciar()" name="btnReiniciar" value="Guardar y Reiniciar">	
 		</form>
 	</div>
 	
-	
-	
-<div id='edificio'>
-	<img src='imagenes/edificio800.png'/>
-	<div id="ladron"></div>
-	<div id="policia"></div>
-	<div id="dinero"></div>
-	<div id="salida"></div>
-	<div id="escalera0" class="escaleras"></div>
-	<div id="escalera1" class="escaleras"></div>
-	<div id="escalera2" class="escaleras"></div>
-	<div id="escalera3" class="escaleras"></div>
-</div>
-
-<div id="opciones">
-<input type="button" onclick="mostrarOpciones()" name="btnOpciones" value="Ver Opciones">
-</div>
+<p><a href="ayuda.html" target="_blank">Como jugar</a></p>
+<a href="#" id="enlacePuntuaciones" style="display: none" onclick="cargarPuntuaciones()">Ver Puntuaciones</a>
+<div id="puntuaciones"></div>
 </body>
 </html>
