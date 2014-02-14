@@ -1,0 +1,117 @@
+#formulario {
+	background-color: white;
+	z-index: 2;
+	float: left;
+	position: absolute;
+	top: 50%;
+	margin-top: -300px;
+	left: 50%;
+	margin-left: -500px;
+	width: 1000px;
+	height: 600px;
+}
+#contenedor {
+	float: left;
+	position: absolute;
+	top: 50%;
+	margin-top: -340px;
+	left: 50%;
+	margin-left: -500px;
+	width: 1000px;
+}
+#divUsuarios {
+	background-color: white;
+	float: left;
+}
+#edificio {
+	float: left;
+	position: absolute;
+	top: 50%;
+	margin-top: -300px;
+	left: 50%;
+	margin-left: -500px;
+	width: 1000px;
+	height: 600px;
+}
+#opciones {
+	float: right;
+}
+#dinero {
+	background: url('../imagenes/dinero.png');
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	background-repeat: no-repeat;
+	/*
+	 border:2px solid;
+	 border-color:green;
+	 */
+}
+#salida {
+	border: 2px solid;
+	border-color: red;
+	background-color: red;
+	position: absolute;
+	background-repeat: no-repeat;
+}
+.escaleras {
+	background: url('../imagenes/escaleras.png');
+	position: absolute;
+	background-repeat: no-repeat;
+	border: 0.8px solid;
+	border-color: #CC6633;
+}
+.ladron {
+	background: url('../imagenes/ladron.png');
+	position: absolute;
+	z-index: 1;
+	/*
+	 border:2px solid;
+	 border-color:blue;
+	 */
+}
+.policia {
+	background: url('../imagenes/policia.png');
+	position: absolute;
+	z-index: 1;
+	/*
+	 border:2px solid;
+	 border-color:red;
+	 */
+}
+.spriteD-0 {
+	background-position: -170px 0px;
+}
+.spriteD-1 {
+	background-position: -125px 0px;
+}
+.spriteD-2 {
+	background-position: -170px 0px;
+}
+.spriteD-3 {
+	background-position: -209px 0px;
+}
+.spriteI-0 {
+	background-position: -420px 0px;
+}
+.spriteI-1 {
+	background-position: -375px 0px;
+}
+.spriteI-2 {
+	background-position: -420px 0px;
+}
+.spriteI-3 {
+	background-position: -462px 0px;
+}
+.spriteA-0 {
+	background-position: -47px 0px;
+}
+.spriteA-1 {
+	background-position: -3px 0px;
+}
+.spriteA-2 {
+	background-position: -47px 0px;
+}
+.spriteA-3 {
+	background-position: -89px 0px;
+}       
